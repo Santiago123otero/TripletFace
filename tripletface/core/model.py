@@ -8,6 +8,14 @@ import torch
 
 from torchvision import models
 
+#model = Encoder( parametres .... )
+#weigths = torch.load( pathverslemodel )['model']
+#model.load_state_dict( weights )
+#jit_model.trace = torch.jit( model, exampledinput )
+#torch.jit.save( 
+#torch.jit.save( jit_model, pathtosave )
+
+
 class Encoder( nn.Module ):
     """Encoder
 
