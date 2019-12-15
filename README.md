@@ -102,7 +102,7 @@ torch.jit.save( jit_model, "model/jitcompile.pt" )
 * Generate those for each of the student included in the dataset
 * Add inference script in order to use the final model
 
-!(triplet_init.py)
+(triplet_inference.py)
 
 * Change README.md in order to include the student choices explained and a table containing the Centroids and Thesholds for each student of the dataset with a vizualisation ( See the one above )
 
