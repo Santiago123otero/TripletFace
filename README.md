@@ -81,6 +81,8 @@ optional arguments:
 
 **Deadline Decembre 13th 2019 at 12pm**
 
+**In the file = Project1.ipynb i showed my work in google colab.**
+
 The students are asked to complete the following tasks:
 * Fork the Project: **check**
 * Improve the model by playing with Hyperparameters and by changing the Architecture ( may not use resnet ): **Check**
