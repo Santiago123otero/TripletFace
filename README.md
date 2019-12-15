@@ -101,6 +101,9 @@ torch.jit.save( jit_model, "model/jitcompile.pt" )
 * Add script to generate Centroids and Thesholds using few face images from one person: 
 * Generate those for each of the student included in the dataset
 * Add inference script in order to use the final model
+
+!(triplet_init.py)
+
 * Change README.md in order to include the student choices explained and a table containing the Centroids and Thesholds for each student of the dataset with a vizualisation ( See the one above )
 
 People 0: 
