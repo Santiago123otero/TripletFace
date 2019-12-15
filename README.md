@@ -84,9 +84,23 @@ optional arguments:
 The students are asked to complete the following tasks:
 * Fork the Project: **check**
 * Improve the model by playing with Hyperparameters and by changing the Architecture ( may not use resnet ): **Check**
+
+```bash
+parser        = argparse.ArgumentParser( )
+parser.add_argument( '-s', '--dataset_path',  type = str,   required = True )
+parser.add_argument( '-m', '--model_path',    type = str,   required = True )
+parser.add_argument( '-i', '--input_size',    type = int,   default  = 224 )
+parser.add_argument( '-z', '--latent_size',   type = int,   default  = 32 )
+parser.add_argument( '-b', '--batch_size',    type = int,   default  = 16 )
+parser.add_argument( '-e', '--epochs',        type = int,   default  = 10 )
+parser.add_argument( '-l', '--learning_rate', type = float, default  = 1e-3 )
+parser.add_argument( '-w', '--n_workers',     type = int,   default  = 4 )
+parser.add_argument( '-r', '--n_samples',     type = int,   default  = 6 )
+```
+
 * JIT compile the model ( see [Documentation](https://pytorch.org/docs/stable/jit.html#torch.jit.trace) )
 
-i was able to generate the jitcompile.pt successfully but the file is too big to uploaded as well as my model.pt 
+**i was able to generate the jitcompile.pt successfully but the file is too big to uploaded as well as my model.pt** 
 
 ```bash
 import torch
@@ -104,8 +118,8 @@ torch.jit.save( jit_model, "model/jitcompile.pt" )
 * Generate those for each of the student included in the dataset
 * Add inference script in order to use the final model
 
-I used this script that was not make by me. i get the centroids and the threshelods kind of but i am know this is not what you are asking, however i post the results because i think they are very interesting.
-(triplet_inference.py)
+**I used this script that was not made by me. i get the centroids and the threshelods kind of but i am know this is not what you are asking, however i posted the results because i think they are very interesting.
+(triplet_inference.py)**
 
 * Change README.md in order to include the student choices explained and a table containing the Centroids and Thesholds for each student of the dataset with a vizualisation ( See the one above )
 
