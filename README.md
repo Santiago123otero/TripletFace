@@ -86,6 +86,7 @@ The students are asked to complete the following tasks:
 * Improve the model by playing with Hyperparameters and by changing the Architecture ( may not use resnet ): Check
 * JIT compile the model ( see [Documentation](https://pytorch.org/docs/stable/jit.html#torch.jit.trace) )
 
+```bash
 import torch
 
 from tripletface.core.model import Encoder
@@ -95,6 +96,7 @@ weights = torch.load( "model/model.pt" )['model']
 model.load_state_dict( weights )
 jit_model = torch.jit.trace( model, torch.rand(4, 3, 4, 3) )
 torch.jit.save( jit_model, "model/jitcompile.pt" )
+```
 
 * Add script to generate Centroids and Thesholds using few face images from one person: 
 * Generate those for each of the student included in the dataset
