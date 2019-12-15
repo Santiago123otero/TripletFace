@@ -82,9 +82,11 @@ optional arguments:
 **Deadline Decembre 13th 2019 at 12pm**
 
 The students are asked to complete the following tasks:
-* Fork the Project: check
-* Improve the model by playing with Hyperparameters and by changing the Architecture ( may not use resnet ): Check
+* Fork the Project: **check**
+* Improve the model by playing with Hyperparameters and by changing the Architecture ( may not use resnet ): **Check**
 * JIT compile the model ( see [Documentation](https://pytorch.org/docs/stable/jit.html#torch.jit.trace) )
+
+i was able to generate the jitcompile.pt successfully but the file is too big to uploaded as well as my model.pt 
 
 ```bash
 import torch
@@ -102,6 +104,7 @@ torch.jit.save( jit_model, "model/jitcompile.pt" )
 * Generate those for each of the student included in the dataset
 * Add inference script in order to use the final model
 
+I used this script that was not make by me. i get the centroids and the threshelods kind of but i am know this is not what you are asking, however i post the results because i think they are very interesting.
 (triplet_inference.py)
 
 * Change README.md in order to include the student choices explained and a table containing the Centroids and Thesholds for each student of the dataset with a vizualisation ( See the one above )
