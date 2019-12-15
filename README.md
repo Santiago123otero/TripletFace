@@ -97,6 +97,7 @@ parser.add_argument( '-l', '--learning_rate', type = float, default  = 1e-3 )
 parser.add_argument( '-w', '--n_workers',     type = int,   default  = 4 )
 parser.add_argument( '-r', '--n_samples',     type = int,   default  = 6 )
 ```
+![TSNE_Latent](vizualisation_5.png)
 
 * JIT compile the model ( see [Documentation](https://pytorch.org/docs/stable/jit.html#torch.jit.trace) )
 
