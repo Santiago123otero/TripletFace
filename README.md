@@ -82,13 +82,25 @@ optional arguments:
 **Deadline Decembre 13th 2019 at 12pm**
 
 The students are asked to complete the following tasks:
-* Fork the Project
-* Improve the model by playing with Hyperparameters and by changing the Architecture ( may not use resnet )
+* Fork the Project: check
+* Improve the model by playing with Hyperparameters and by changing the Architecture ( may not use resnet ): Check
 * JIT compile the model ( see [Documentation](https://pytorch.org/docs/stable/jit.html#torch.jit.trace) )
-* Add script to generate Centroids and Thesholds using few face images from one person
+
+import torch
+
+from tripletface.core.model import Encoder
+
+model = Encoder(64)
+weights = torch.load( "model/model.pt" )['model']
+model.load_state_dict( weights )
+jit_model = torch.jit.trace( model, torch.rand(4, 3, 4, 3) )
+torch.jit.save( jit_model, "model/jitcompile.pt" )
+
+* Add script to generate Centroids and Thesholds using few face images from one person: 
 * Generate those for each of the student included in the dataset
 * Add inference script in order to use the final model
 * Change README.md in order to include the student choices explained and a table containing the Centroids and Thesholds for each student of the dataset with a vizualisation ( See the one above )
+
 People 0: 
 Tresholds = 0.40548295181128197
 Centroid = [-0.14217476057820022, -0.022368336794897914, 0.16067822329932824, 0.50144973577698693, -0.48882991401478648, -0.077571916626766324, -0.17792163797275862, 0.14542136644013226, -0.56713610514998436, 0.5711914780549705, -0.84808010421693325, 0.10770503955427557, -0.10127248871140182, 0.87072942405939102, 0.25426830386277288, -0.50021783215925097, -0.63492217950988561, -0.58845732873305678, -0.60083950031548738, 1.2519282605499029, 0.034675421076826751, 0.21098475164035335, 0.6738878795877099, 0.070157515758182853, 0.19918441656045616, 0.13983295917569194, -0.040799407695885748, -0.39680884953122586, -0.074149309424683452, -0.76377893425524235, 0.31727452366612852, -0.24477353412657976, -0.13016357336891815, 0.19469253357965499, 0.20853172987699509, -0.20956118276808411, -0.96204543113708496, -0.60385395772755146, 0.86780743580311537, -0.38821523962542415, 0.0016436458099633455, -0.10197210044134408, 0.21503199287690222, 0.43207545927725732, -0.82517835032194853, 0.028893173919641413, -0.51204833062365651, -0.02128394867759198, -0.24959297344321385, -0.35138676490169019, -0.48648670560214669, 0.58455936703830957, -0.31719820667058229, -0.046314158360473812, 0.81319827493280172, 0.14207125024404377, -0.398909917101264, -0.33589987561572343, -0.34557322692126036, 0.45300947327632457, 0.10349104704800993, -0.056229433510452509, 0.16533716069534421, 0.35803522437345237]
